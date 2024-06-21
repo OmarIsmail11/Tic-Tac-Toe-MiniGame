@@ -65,6 +65,21 @@ void DisplayGrid(char Board[][3])
     cout << "   |   |   " << endl;
 }
 
+int CheckForWin(char Board[][3],char Player1Symbol, char Player2Symbol)
+{
+    if (Board[0][0] = Player1Symbol && Board[0][1] == Player1Symbol && Board[0][2] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][0] = Player1Symbol && Board[1][0] == Player1Symbol && Board[2][0] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][0] = Player1Symbol && Board[0][1] == Player1Symbol && Board[0][2] == Player1Symbol)
+    {
+        return 1;
+    }
+}
 int main()
 {
     char Board[3][3] = {'1','2','3','4','5','6','7','8','9'};
@@ -72,6 +87,7 @@ int main()
     char Player1Symbol, Player2Symbol;
     string Player1Name, Player2Name;
     int DiceRoll;
+    int OccupiedCells = 0;
     GetInitials(Player1Name,Player2Name,Player1Symbol,Player2Symbol, DiceRoll);
     DisplayGrid(Board);
 }
