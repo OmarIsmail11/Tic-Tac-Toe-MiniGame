@@ -67,19 +67,40 @@ void DisplayGrid(char Board[][3])
 
 int CheckForWin(char Board[][3],char Player1Symbol, char Player2Symbol)
 {
-    if (Board[0][0] = Player1Symbol && Board[0][1] == Player1Symbol && Board[0][2] == Player1Symbol)
+    if (Board[0][0] == Player1Symbol && Board[0][1] == Player1Symbol && Board[0][2] == Player1Symbol)
     {
         return 1;
     }
-    if (Board[0][0] = Player1Symbol && Board[1][0] == Player1Symbol && Board[2][0] == Player1Symbol)
+    if (Board[1][0] == Player1Symbol && Board[1][1] == Player1Symbol && Board[1][2] == Player1Symbol)
     {
         return 1;
     }
-    if (Board[0][0] = Player1Symbol && Board[0][1] == Player1Symbol && Board[0][2] == Player1Symbol)
+    if (Board[2][0] == Player1Symbol && Board[2][1] == Player1Symbol && Board[2][2] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][0] == Player1Symbol && Board[1][0] == Player1Symbol && Board[2][0] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][1] == Player1Symbol && Board[1][1] == Player1Symbol && Board[2][1] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][2] == Player1Symbol && Board[1][2] == Player1Symbol && Board[2][2] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[0][0] == Player1Symbol && Board[1][1] == Player1Symbol && Board[2][2] == Player1Symbol)
+    {
+        return 1;
+    }
+    if (Board[2][0] == Player1Symbol && Board[1][1] == Player1Symbol && Board[0][2] == Player1Symbol)
     {
         return 1;
     }
 }
+
 int main()
 {
     char Board[3][3] = {'1','2','3','4','5','6','7','8','9'};
