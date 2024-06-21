@@ -52,6 +52,19 @@ void GetInitials(string &Player1Name, string &Player2Name, char &Player1Symbol, 
     cout << Player2Name << " plays with symbol " << Player2Symbol << endl;
 }
 
+void DisplayGrid(char Board[][3])
+{
+    cout << "   |   |  " << endl;
+    cout << " " << Board[0][0] << " | " << Board[0][1] << " | " << Board[0][2] << endl;
+    cout << "___|___|___" << endl;
+    cout << "   |   |  " << endl;
+    cout << " " << Board[1][0] << " | " << Board[1][1] << " | " << Board[1][2] << endl;
+    cout << "___|___|___" << endl;
+    cout << "   |   |  " << endl;
+    cout << " " << Board[2][0] << " | " << Board[2][1] << " | " << Board[2][2] << endl;
+    cout << "   |   |   " << endl;
+}
+
 int main()
 {
     char Board[3][3] = {'1','2','3','4','5','6','7','8','9'};
@@ -60,4 +73,5 @@ int main()
     string Player1Name, Player2Name;
     int DiceRoll;
     GetInitials(Player1Name,Player2Name,Player1Symbol,Player2Symbol, DiceRoll);
+    DisplayGrid(Board);
 }
